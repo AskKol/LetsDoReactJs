@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  letsdoreactjs:
+    image: letsdoreactjs
+    build:
+      context: ./LetsDoReactJs
+      dockerfile: Dockerfile
