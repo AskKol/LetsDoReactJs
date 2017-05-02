@@ -8,6 +8,7 @@
     <Content Include="wwwroot\Content\ModernizerScript.js" />
     <Content Include="wwwroot\Content\Script.js" />
     <Content Include="wwwroot\Content\Site.css" />
+    <Content Include="wwwroot\Content\Tutorial.jsx" />
     <Content Include="wwwroot\Images\body.jpg" />
     <Content Include="wwwroot\Images\gt_favicon.png" />
   </ItemGroup>

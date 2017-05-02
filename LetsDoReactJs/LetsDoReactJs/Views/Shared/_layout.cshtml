@@ -1,77 +1,92 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="Sergey Pozhilov (GetTemplate.com)">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="description">
+    <meta content="Sergey Pozhilov (GetTemplate.com)" name="author">
 
     <title>Lets do react</title>
-
-    <link rel="shortcut icon" href="~/Images/gt_favicon.png">
-
-    <!-- Bootstrap itself -->
-    <link href="//ajax.aspnetcdn.com/ajax/bootstrap/3.0.0/css/bootstrap.min.css" asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-
-    <!-- Custom styles -->
-    <link rel="stylesheet" href="~/Content/Site.css">
-
-    <!-- Fonts -->
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" asp-fallback-href="~/lib/Font-Awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="~/Images/gt_favicon.png" rel="shortcut icon"><!-- Bootstrap itself -->
+    <link href="//ajax.aspnetcdn.com/ajax/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" type="text/css"><!-- Custom styles -->
+    <link href="~/Content/Site.css" rel="stylesheet"><!-- Fonts -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
-</head>
+</head><!-- use "theme-invert" class on bright backgrounds, also try "text-shadows" class -->
 
-<!-- use "theme-invert" class on bright backgrounds, also try "text-shadows" class -->
+
 <body class="theme-invert">
-
     <nav class="mainmenu">
         <div class="container">
             <div class="dropdown">
-                <button type="button" class="navbar-toggle" data-toggle="dropdown"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                <!-- <a data-toggle="dropdown" href="#">Dropdown trigger</a> -->
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                    <li><a href="#head" class="active">Hello</a></li>
-                    <li><a href="#about">About me</a></li>
-                    <li><a href="#themes">Themes</a></li>
-                    <li><a href="#contact">Get in touch</a></li>
+                <button class="navbar-toggle" data-toggle="dropdown" type="button">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button> <!-- <a data-toggle="dropdown" href="#">Dropdown trigger</a> -->
+
+
+                <ul aria-labelledby="dLabel" class="dropdown-menu" role="menu">
+                    <li>
+                        <a class="active" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+
+
+                    <li>
+                        <a href="#about">About me</a>
+                    </li>
+
+
+                    <li>
+                        <a href="#themes">Themes</a>
+                    </li>
+
+
+                    <li>
+                        <a href="#contact">Get in touch</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
-
-
     <!-- Main (Home) section -->
+
+
     <section class="section" id="head">
         <div class="container">
-
             <div class="row">
                 <div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">
-                    @RenderBody()
-                    <!-- Site Title, your name, HELLO msg, etc. -->
-                    @*<h2 class="subtitle">Free html5 template by GetTemplate</h2>*@
+                    @RenderBody() <!-- Site Title, your name, HELLO msg, etc. -->
+                    @*
 
-                    <!-- Short introductory (optional) -->
+                        <h2 class="subtitle">Free html5 template by GetTemplate</h2>
+                    *@ <!-- Short introductory (optional) -->
+
+
                     <h3 class="tagline">
                         Potentially, the best place to tell people why they are here.<br>
                         So, this is a demo page built to showcase the beauty of the template.
                     </h3>
-
                     @*Nice place to describe your site in a sentence or two
-                        <p><a href="/download/" class="btn btn-default btn-lg">Download template now</a></p>*@
 
-                </div> <!-- /col -->
-            </div> <!-- /row -->
-
+                        <p><a class="btn btn-default btn-lg" href="/download/">Download template now</a>
+                        </p>
+                    *@
+                </div>
+                <!-- /col -->
+            </div>
+            <!-- /row -->
         </div>
     </section>
     <!-- Load js libs only when the page is loaded. -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" asp-fallback-src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js" asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="assets/js/modernizr.custom.72241.js"></script>
-    <!-- Custom template scripts -->
-    <script src="~/Content/ModernizerScript.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js">
+    </script> <!-- Custom template scripts -->
 
+    <script src="~/Content/ModernizerScript.js">
+    </script> 
+    <script src="@Url.Content("~/Content/Tutorial.jsx")"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
