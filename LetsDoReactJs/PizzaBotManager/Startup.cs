@@ -17,9 +17,10 @@ namespace PizzaBotManager
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddReact();
+            services.AddMvc();
+
 
         }
 
@@ -29,11 +30,11 @@ namespace PizzaBotManager
 
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
-
-            app.UseReact(configure => configure.SetLoadReact(true));
+            app.UseReact(configure =>{});
+            //app.UseReact(configure => configure.SetLoadReact(true));
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
-           
+
         }
     }
 }

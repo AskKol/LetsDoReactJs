@@ -23,5 +23,8 @@
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.1" />
     <PackageReference Include="React.AspNet" Version="3.0.1" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PizzaBotManager\PizzaBotManager.csproj" />
+  </ItemGroup>
 
 </Project>

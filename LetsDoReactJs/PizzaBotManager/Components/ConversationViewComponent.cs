@@ -5,15 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LetsDoReactJs.Controllers
+namespace PizzaBotManager.Components
 {
-    public class HomeController:Controller
+    public class ConversationViewComponent: ViewComponent
     {
-        
-        public ActionResult Index()
+
+        public IViewComponentResult Invoke()
         {
-           
-            return View("Index");
+            return View();
         }
     }
 }
