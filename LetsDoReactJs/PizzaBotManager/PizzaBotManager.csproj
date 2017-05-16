@@ -12,7 +12,6 @@
     <Content Include="wwwroot\lib\jquery\src\queue\traversing\var\siblings.js" />
     <Content Include="wwwroot\lib\modernizr.customII.js" />
     <Content Include="wwwroot\lib\ReactJs\PizzaBotManager.jsx" />
-    <Content Include="wwwroot\lib\ReactJs\test.jsx" />
     <Content Include="wwwroot\lib\script.js" />
     <Content Include="wwwroot\lib\style.css" />
   </ItemGroup>

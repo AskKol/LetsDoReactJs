@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PizzaBotManager.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +12,14 @@ namespace PizzaBotManager.Components
     {
 
 
-        public IViewComponentResult Invoke()
+        public IViewComponentResult Invoke(BaseModel aModel)
         {
-            return View();
+            if (aModel != null && aModel.WebJobButtonClicked)
+            {
+                var anInbox = (InboxModel)aModel;
+                anInbox.Message = "I work!";
+            }
+            return View(aModel);
         }
     }
 }

@@ -18,5 +18,16 @@ namespace PizzaBotManager.Controllers
             aModel.PageTitle = "Welcome";
             return View(aModel);
         }
+
+        [HttpPost]
+        public IActionResult Index(BaseModel aModel)
+        {
+            
+
+            return View(aModel);
+        }
+
     }
+
+   
 }

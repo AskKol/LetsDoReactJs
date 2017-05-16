@@ -1,6 +1,27 @@
 ﻿@*@section reactScript{
- <script src="@Url.Content("~/lib/ReactJs/PizzaBotManager.jsx")"></script>
-}*@
+     <script src="@Url.Content("~/lib/ReactJs/PizzaBotManager.jsx")"></script>
+    }*@
 
-I am inbox
+@model PizzaBotManager.Models.BaseModel
+    I am inbox
 <div id="divInbox"></div>
+<div>
+    <form asp-action="Index" class="form-horizontal" method="post">
+        <input type="hidden" asp-for="ApplicationName" value="@Model.ApplicationName" />
+        <h4>
+            Click to see web job effect
+            <input id="btnWebJob" type="submit" value="Web job" class="btn btn-default" asp-route-WebJobButtonClicked="true"/>
+        </h4>
+    </form>
+    @*@if (aModel.webJobButtonClicked)
+        {
+            aModel.WebJob = true;
+        }*@
+    @if (Model != null && Model.GetType().ToString() == "PizzaBotManager.Models.InboxModel" && Model.WebJobButtonClicked)
+            {
+        <div id="webJobResponse">
+            <h4>Web job has been sent</h4>
+        </div>
+    }
+
+</div>

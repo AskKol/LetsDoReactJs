@@ -5,7 +5,9 @@
         @RenderBody()
     </div>*@
 
+@using PizzaBotManager.Models
 @model PizzaBotManager.Models.BaseModel
+
 <!DOCTYPE html>
 
 <html lang="en" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
@@ -78,7 +80,22 @@
                             <p>Feature</p>
 
                         </a>
-                        @await Component.InvokeAsync("Inbox")
+                        @{
+                          
+                            @if (!Model.WebJobButtonClicked)
+                            {
+                                @await Component.InvokeAsync("Inbox", Model);
+                                /**/
+                            }
+                            else
+                            {
+                                //var makeMeInboxModel = (InboxModel)Model;
+                                @await Component.InvokeAsync("Inbox", Model);
+                              
+                            }
+                        }
+
+                     
                     </div>
 
 
