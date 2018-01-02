@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.4
+VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsDoReactJs", "LetsDoReactJs\LetsDoReactJs.csproj", "{D13C0EC3-DC79-457A-8C30-03C206E35EE2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaBotManager", "PizzaBotManager\PizzaBotManager.csproj", "{5B15FA76-22F6-468D-B4AB-8E880012E387}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessPizza", "ProcessPizza\ProcessPizza.csproj", "{67D8A9AE-D41A-4E1A-8AF6-35BDFA225453}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiHolder", "ApiHolder\ApiHolder.csproj", "{E2B7B06A-9F0F-4188-8076-ED36CF18194C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{67D8A9AE-D41A-4E1A-8AF6-35BDFA225453}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67D8A9AE-D41A-4E1A-8AF6-35BDFA225453}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67D8A9AE-D41A-4E1A-8AF6-35BDFA225453}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2B7B06A-9F0F-4188-8076-ED36CF18194C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2B7B06A-9F0F-4188-8076-ED36CF18194C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2B7B06A-9F0F-4188-8076-ED36CF18194C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2B7B06A-9F0F-4188-8076-ED36CF18194C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
